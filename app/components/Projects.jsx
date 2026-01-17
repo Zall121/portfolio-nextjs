@@ -76,8 +76,8 @@ export default function Projects() {
                     ))}
                 </motion.div>
 
-                {/* Projects Grid */}
-                <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" variants={staggerContainer} initial="hidden" animate={isInView ? 'visible' : 'hidden'}>
+                {/* Projects Grid - 2 columns on mobile */}
+                <motion.div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6" variants={staggerContainer} initial="hidden" animate={isInView ? 'visible' : 'hidden'}>
                     {filteredProjects.map((project) => (
                         <motion.article key={project.id} variants={staggerItem} className="group relative" layout>
                             {/* Gallery - Simple photo display */}

@@ -1,56 +1,44 @@
 export const skills = [
     {
-        category: 'Frontend',
+        category: 'Tools & Technologies',
+        subtitle: 'Alat & Teknologi Yang Saya Gunakan dan Pelajari',
         items: [
-            { name: 'Next.js', icon: '▲', level: 50, color: '#ffffff' },
-            { name: 'JavaScript', icon: '💛', level: 50, color: '#F7DF1E' },
-            { name: 'Tailwind CSS', icon: '🎨', level: 50, color: '#38B2AC' },
-            { name: 'HTML5', icon: '🌐', level: 70, color: '#E34F26' },
-            { name: 'CSS3', icon: '🎭', level: 70, color: '#1572B6' },
-            { name: 'Bootstrap', icon: '🅱️', level: 76, color: '#1572B6' },
-            { name: 'XML + Java', icon: '🧩☕', level: 50, color: '#47a248' },
+            { name: 'Visual Studio Code', subtitle: 'Code Editor', logo: '/logos/vscode.svg' },
+            { name: 'React JS', subtitle: 'Framework', logo: '/logos/react.svg' },
+            { name: 'Next JS', subtitle: 'Framework', logo: '/logos/nextjs.svg' },
+            { name: 'Tailwind CSS', subtitle: 'Framework', logo: '/logos/tailwind.svg' },
+            { name: 'Bootstrap', subtitle: 'Framework', logo: '/logos/bootstrap.svg' },
+            { name: 'JavaScript', subtitle: 'Language', logo: '/logos/javascript.svg' },
+            { name: 'Node JS', subtitle: 'JavaScript Runtime', logo: '/logos/nodejs.svg' },
+            { name: 'GitHub', subtitle: 'Repository', logo: '/logos/github.svg' },
+            { name: 'Canva', subtitle: 'Design App', logo: '/logos/canva.svg' },
+            { name: 'XAMPP', subtitle: 'Local Server', logo: '/logos/xampp.svg' },
+            { name: 'HTML', subtitle: 'Language', logo: '/logos/html.svg' },
+            { name: 'CSS', subtitle: 'Language', logo: '/logos/css.svg' },
+            { name: 'Laravel', subtitle: 'Framework', logo: '/logos/laravel.svg' },
+            { name: 'Filament', subtitle: 'Admin Panel', logo: '/logos/filament.svg' },
+            { name: 'PHP', subtitle: 'Language', logo: '/logos/php.svg' },
+            { name: 'Java', subtitle: 'Language', logo: '/logos/java.svg' },
+            { name: 'C++', subtitle: 'Language', logo: '/logos/cplusplus.svg' },
+            { name: 'MySQL', subtitle: 'Database', logo: '/logos/mysql.svg' },
+            { name: 'Python', subtitle: 'Language', logo: '/logos/python.svg' },
+            { name: 'Android Studio', subtitle: 'IDE', logo: '/logos/android-studio.svg' },
+            { name: 'Blender', subtitle: '3D Software', logo: '/logos/blender.svg' },
+            { name: 'Vercel', subtitle: 'Hosting', logo: '/logos/vercel.svg' },
+            { name: 'Linux', subtitle: 'OS', logo: '/logos/linux.svg' },
+            { name: 'Windows', subtitle: 'OS', logo: '/logos/windows.svg' },
         ]
     },
     {
-        category: 'Backend',
+        category: 'Developer Essentials',
+        subtitle: 'Daily Fuel',
         items: [
-            { name: 'Node.js', icon: '💚', level: 45, color: '#339933' },
-            { name: 'Python', icon: '🐍', level: 55, color: '#3776AB' },
-            { name: 'PHP', icon: '🐘', level: 60, color: '#777BB4' },
-            { name: 'Laravel', icon: '🔴', level: 57, color: '#FF2D20' },
-            { name: 'REST API', icon: '🔗', level: 50, color: '#00d4ff' },
+            { name: 'Coffee', subtitle: 'Energy Boost', logo: '/logos/coffee.svg' },
+            { name: 'Late Night Coding', subtitle: 'Focus Mode', logo: '/logos/moon.svg' },
+            { name: 'AI Coding Assistant', subtitle: 'Productivity', logo: '/logos/ai.svg' },
+            { name: 'Cigarettes', subtitle: 'Break Time', logo: '/logos/rokok.svg' },
         ]
-    },
-    {
-        category: 'Database',
-        items: [
-            { name: 'MongoDB', icon: '🍃', level: 30, color: '#47A248' },
-            { name: 'MySQL', icon: '🐬', level: 60, color: '#4479A1' },
-            { name: 'Firebase', icon: '🔥', level: 50, color: '#FFCA28' },
-        ]
-    },
-    {
-        category: 'DevOps & Tools',
-        items: [
-            { name: 'Git', icon: '📦', level: 50, color: '#F05032' },
-            { name: 'Android Studio Code', icon: '📱', level: 68, color: '#2496ED' },
-            { name: 'VSCode', icon: '💻', level: 80, color: '#FF9900' },
-            { name: 'Vercel', icon: '▲', level: 60, color: '#ffffff' },
-            { name: 'GitHub Actions', icon: '⚙️', level: 60, color: '#2088FF' },
-            { name: 'Windows', icon: '🪟', level: 96, color: '#ffffff' },
-            { name: 'Linux', icon: '🐧', level: 42, color: '#FCC624' },
-        ]
-    },
-    {
-  category: 'Developer Essentials',
-  items: [
-    { name: 'Coffee', icon: '☕', level: 90, color: '#6F4E37' },
-    { name: 'Late Night Coding', icon: '🌙', level: 80, color: '#6366F1' },
-    { name: 'AI Coding Assistant', icon: '🤖', level: 85, color: '#22C55E' },
-    { name: 'Cigarettes', icon: '🚬', level: 70, color: '#9CA3AF' },
-  ]
-}
-
+    }
 ];
 
 export const techStack = [
