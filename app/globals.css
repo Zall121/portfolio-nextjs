@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Charcoal + Off-White Professional Theme ===== */
+:root {
+  --charcoal-900: #0a0a0a;
+  --charcoal-800: #141414;
+  --charcoal-700: #1a1a1a;
+  --charcoal-600: #262626;
+  --charcoal-500: #333333;
+  --charcoal-400: #404040;
+  --charcoal-300: #525252;
+  --off-white: #f5f5f5;
+  --off-white-dim: #e5e5e5;
+  --gray-text: #a3a3a3;
+  --gray-muted: #737373;
+  --accent: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--charcoal-900);
+  color: var(--off-white);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  /* Prevent zoom on mobile */
+  touch-action: pan-x pan-y;
+  -ms-touch-action: pan-x pan-y;
+}
+
+/* Prevent zoom on mobile */
+html {
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+}
+
+/* Prevent double-tap zoom */
+* {
+  touch-action: manipulation;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--charcoal-800);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--charcoal-400);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--charcoal-300);
+}
+
+::selection {
+  background-color: rgba(245, 245, 245, 0.2);
+  color: #fff;
+}
+
+/* ===== Typography ===== */
+.text-gradient {
+  color: var(--off-white);
+}
+
+.text-gradient-blue-purple {
+  color: var(--off-white);
+}
+
+/* ===== Glass Effects ===== */
+.bg-glass {
+  background-color: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--charcoal-500);
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  color: var(--charcoal-900);
+  background-color: var(--off-white);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--off-white-dim);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  background: transparent;
+  border: 1px solid var(--charcoal-400);
+  color: var(--off-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--charcoal-600);
+  border-color: var(--charcoal-300);
+}
+
+/* ===== Cards ===== */
+.card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  background-color: var(--charcoal-700);
+  border: 1px solid var(--charcoal-500);
+}
+
+.card:hover {
+  border-color: var(--charcoal-400);
+  background-color: var(--charcoal-600);
+}
+
+/* ===== Sections ===== */
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--off-white);
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--gray-text);
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+/* ===== Form ===== */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  background-color: var(--charcoal-600);
+  border: 1px solid var(--charcoal-500);
+  color: var(--off-white);
+  font-family: monospace;
+}
+
+.input-field::placeholder {
+  color: var(--gray-muted);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--charcoal-300);
+  background-color: var(--charcoal-700);
+}
+
+/* ===== Navigation ===== */
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  color: var(--gray-text);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--off-white);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--off-white);
+  transition: all 0.2s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 50%;
+}
+
+/* ===== Background Patterns ===== */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ===== Gradient Orbs - Subtle ===== */
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.gradient-orb-blue {
+  background: radial-gradient(circle, #404040, transparent 70%);
+}
+
+.gradient-orb-purple {
+  background: radial-gradient(circle, #333333, transparent 70%);
+}
