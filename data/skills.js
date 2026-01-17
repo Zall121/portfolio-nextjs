@@ -36,7 +36,7 @@ export const skills = [
             { name: 'Coffee', subtitle: 'Energy Boost', logo: '/logos/coffee.svg' },
             { name: 'Late Night Coding', subtitle: 'Focus Mode', logo: '/logos/moon.svg' },
             { name: 'AI Coding Assistant', subtitle: 'Productivity', logo: '/logos/ai.svg' },
-            { name: 'Cigarettes', subtitle: 'Break Time', logo: '/logos/rokok.svg' },
+            { name: 'Cigarettes', subtitle: 'Break Time', logo: '/logos/rokok.png' },
         ]
     }
 ];
