@@ -23,7 +23,7 @@ export default function Contact() {
     };
 
     const contactInfo = [
-        { icon: '📧', label: 'Email', value: 'faizalhadyi60@gmail.com', href: 'mailto:faizalhadyi60@gmail.com', color: '#00d4ff' },
+        { icon: '📧', label: 'Email', value: 'achfaizalhadyi@gmail.com', href: 'mailto:achfaizalhadyi@gmail.com', color: '#00d4ff' },
         { icon: '💻', label: 'GitHub', value: 'github.com/Zall121', href: 'https://github.com/Zall121', color: '#a855f7' },
         { icon: '📸', label: 'Instagram', value: '@zall.hdy', href: 'https://www.instagram.com/zall.hdy/', color: '#ec4899' },
     ];

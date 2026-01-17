@@ -37,8 +37,9 @@ body {
 /* Prevent zoom on mobile */
 html {
   scroll-behavior: smooth;
-  touch-action: manipulation;
+  touch-action: pan-x pan-y;
   -ms-touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Prevent double-tap zoom */

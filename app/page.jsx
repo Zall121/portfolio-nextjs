@@ -17,9 +17,9 @@ function Navigation() {
     const navItems = [
         { id: 'home', label: 'Home' },
         { id: 'about', label: 'About' },
-        { id: 'skills', label: 'Skills' },
+        { id: 'skills', label: 'Tools' },
         { id: 'projects', label: 'Projects' },
-        { id: 'experience', label: 'Experience' },
+        { id: 'experience', label: 'Education' },
         { id: 'contact', label: 'Contact' },
     ];
 
@@ -56,11 +56,12 @@ function Navigation() {
             >
                 <nav className="max-w-7xl mx-auto px-4 py-4">
                     <div className="flex items-center justify-between">
-                        <motion.button onClick={() => scrollToSection('home')} className="text-xl font-bold text-[#f5f5f5]" whileHover={{ scale: 1.05 }}>
+                        <motion.button onClick={() => scrollToSection('home')} className="flex items-center gap-2 text-xl font-bold text-[#f5f5f5]" whileHover={{ scale: 1.05 }}>
+                            <img src="/logos/logozall.png" alt="Logo" className="w-8 h-8 object-contain" />
                             Zall.Hdy
                         </motion.button>
 
-                        <ul className="hidden 2xl:flex items-center gap-1">
+                        <ul className="hidden lg:flex items-center gap-1">
                             {navItems.map((item) => (
                                 <li key={item.id}>
                                     <button onClick={() => scrollToSection(item.id)} className={`nav-link ${activeSection === item.id ? 'text-[#f5f5f5]' : ''}`}>{item.label}</button>
@@ -68,9 +69,9 @@ function Navigation() {
                             ))}
                         </ul>
 
-                        <motion.button onClick={() => scrollToSection('contact')} className="hidden 2xl:flex btn-primary text-sm" whileHover={{ scale: 1.02 }}>Let's Talk</motion.button>
+                        <motion.button onClick={() => scrollToSection('contact')} className="hidden lg:flex btn-primary text-sm" whileHover={{ scale: 1.02 }}>Let's Talk</motion.button>
 
-                        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="2xl:hidden p-2 text-[#a3a3a3]">
+                        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden p-2 text-[#a3a3a3]">
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 {isMobileMenuOpen ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /> : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />}
                             </svg>
@@ -81,7 +82,7 @@ function Navigation() {
 
             <AnimatePresence>
                 {isMobileMenuOpen && (
-                    <motion.div className="fixed inset-0 z-40 2xl:hidden" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                    <motion.div className="fixed inset-0 z-40 lg:hidden" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                         <motion.div className="absolute inset-0 backdrop-blur-xl" style={{ backgroundColor: 'rgba(10,10,10,0.95)' }} onClick={() => setIsMobileMenuOpen(false)} />
                         <motion.nav className="absolute top-20 left-4 right-4 p-6 rounded-2xl" style={{ backgroundColor: '#1a1a1a', border: '1px solid #333' }} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
                             <ul className="space-y-2">

@@ -48,7 +48,7 @@ export default function Projects() {
                 <motion.div className="text-center mb-12" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}}>
                     <motion.span
                         className="inline-block px-4 py-2 mb-4 rounded-full text-sm"
-                        style={{ backgroundColor: 'rgba(168,85,247,0.1)', border: '1px solid rgba(168,85,247,0.2)', color: '#a855f7', fontFamily: 'monospace' }}
+                        style={{ backgroundColor: 'rgba(163,163,163,0.1)', border: '1px solid rgba(163,163,163,0.2)', color: '#a3a3a3', fontFamily: 'monospace' }}
                     >
                         {'<Projects />'}
                     </motion.span>
@@ -64,9 +64,9 @@ export default function Projects() {
                             onClick={() => setActiveCategory(category)}
                             className="px-5 py-2.5 rounded-full text-sm font-medium transition-all"
                             style={{
-                                background: activeCategory === category ? 'linear-gradient(to right, #00d4ff, #a855f7)' : 'rgba(18,18,26,0.5)',
-                                color: activeCategory === category ? 'white' : '#9ca3af',
-                                border: activeCategory === category ? 'none' : '1px solid rgba(255,255,255,0.05)',
+                                background: activeCategory === category ? '#f5f5f5' : 'rgba(26,26,26,0.8)',
+                                color: activeCategory === category ? '#0a0a0a' : '#a3a3a3',
+                                border: activeCategory === category ? 'none' : '1px solid #333',
                             }}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -102,14 +102,14 @@ export default function Projects() {
                                 /* Web & Android - Card style */
                                 <motion.div
                                     className="relative h-full rounded-2xl overflow-hidden cursor-pointer transition-all"
-                                    style={{ backgroundColor: 'rgba(18,18,26,0.6)', border: '1px solid rgba(255,255,255,0.05)', backdropFilter: 'blur(8px)' }}
-                                    whileHover={{ y: -5, boxShadow: '0 25px 50px -12px rgba(168,85,247,0.25)' }}
+                                    style={{ backgroundColor: '#1a1a1a', border: '1px solid #333', backdropFilter: 'blur(8px)' }}
+                                    whileHover={{ y: -5, boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)' }}
                                     onClick={() => openLightbox(project)}
                                 >
                                     {/* Thumbnail */}
-                                    <div className="relative h-48 overflow-hidden" style={{ background: 'linear-gradient(to bottom right, rgba(0,212,255,0.2), rgba(168,85,247,0.2), rgba(236,72,153,0.2))' }}>
+                                    <div className="relative h-48 overflow-hidden" style={{ background: '#262626' }}>
                                         {project.featured && (
-                                            <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-white text-xs font-semibold z-10" style={{ background: 'linear-gradient(to right, #00d4ff, #a855f7)' }}>
+                                            <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-white text-xs font-semibold z-10" style={{ background: '#f5f5f5', color: '#0a0a0a' }}>
                                                 ⭐ Unggulan
                                             </div>
                                         )}
@@ -331,8 +331,8 @@ export default function Projects() {
                                             {selectedProject.images.map((img, idx) => (
                                                 <div
                                                     key={idx}
-                                                    className="flex-shrink-0 h-full flex items-center justify-center bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10"
-                                                    style={{ width: `${100 / selectedProject.images.length}%` }}
+                                                    className="flex-shrink-0 h-full flex items-center justify-center"
+                                                    style={{ width: `${100 / selectedProject.images.length}%`, backgroundColor: '#1a1a1a' }}
                                                 >
                                                     <img
                                                         src={img}
@@ -375,7 +375,7 @@ export default function Projects() {
                                             key={idx}
                                             onClick={() => setCurrentImageIndex(idx)}
                                             className={`w-3 h-3 rounded-full transition-all ${idx === currentImageIndex
-                                                ? 'bg-gradient-to-r from-cyan-500 to-purple-500 w-6'
+                                                ? 'bg-[#f5f5f5] w-6'
                                                 : 'bg-white/30 hover:bg-white/50'
                                                 }`}
                                         />
