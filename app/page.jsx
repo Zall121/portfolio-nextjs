@@ -57,7 +57,7 @@ function Navigation() {
                 <nav className="max-w-7xl mx-auto px-4 py-4">
                     <div className="flex items-center justify-between">
                         <motion.button onClick={() => scrollToSection('home')} className="text-xl font-bold text-[#f5f5f5]" whileHover={{ scale: 1.05 }}>
-                            Faizal Hadyi.
+                            Zall.Hdy
                         </motion.button>
 
                         <ul className="hidden 2xl:flex items-center gap-1">
