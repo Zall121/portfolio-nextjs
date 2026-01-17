@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { staggerContainer, staggerItem } from '@/lib/reactbits';
+import Lanyard3D from './Lanyard3D/Lanyard3D';
 
 export default function About() {
     const ref = useRef(null);
@@ -41,38 +42,16 @@ export default function About() {
 
                 {/* Main Content */}
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
-                    {/* Code Window */}
+                    {/* 3D Lanyard */}
                     <motion.div
                         className="relative flex justify-center"
                         initial={{ opacity: 0, x: -50 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                        <motion.div
-                            className="relative w-full max-w-md p-5 rounded-2xl"
-                            style={{ backgroundColor: 'rgba(18,18,26,0.8)', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(24px)' }}
-                            whileHover={{ scale: 1.02 }}
-                        >
-                            <div className="flex items-center gap-2 mb-4 pb-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                                <div className="w-3 h-3 rounded-full bg-red-500" />
-                                <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                                <div className="w-3 h-3 rounded-full bg-green-500" />
-                                <span className="ml-2 text-xs" style={{ color: '#6b7280', fontFamily: 'monospace' }}>about-me.json</span>
-                            </div>
-                            <pre className="text-xs sm:text-sm overflow-x-auto" style={{ fontFamily: 'monospace', color: '#d1d5db' }}>
-                                {`{
-  `}<span style={{ color: '#a855f7' }}>"name"</span>{`: `}<span style={{ color: '#22c55e' }}>"Zall.Hdy"</span>{`,
-  `}<span style={{ color: '#a855f7' }}>"title"</span>{`: `}<span style={{ color: '#22c55e' }}>"Junior Web & Android Developer"</span>{`,
-  `}<span style={{ color: '#a855f7' }}>"location"</span>{`: `}<span style={{ color: '#22c55e' }}>"Indonesia"</span>{`,
-  `}<span style={{ color: '#a855f7' }}>"experience"</span>{`: `}<span style={{ color: '#00d4ff' }}>3</span>{`,
-  `}{``}<span style={{ color: '#a855f7' }}>"passions"</span>{`: [
-    `}<span style={{ color: '#22c55e' }}>"clean code"</span>{`,
-    `}<span style={{ color: '#22c55e' }}>"user experience"</span>{`,
-    `}<span style={{ color: '#22c55e' }}>"innovation"</span>{`
-  ]
-}`}
-                            </pre>
-                        </motion.div>
+                        <div className="w-full max-w-md">
+                            <Lanyard3D />
+                        </div>
                     </motion.div>
 
                     {/* Text Content */}
