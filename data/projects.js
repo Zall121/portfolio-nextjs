@@ -46,7 +46,7 @@ export const projects = [
             '/projects/web/wisata/2.png',
             '/projects/web/wisata/3.png',
         ],
-        tags: ['HTML', 'CSS','Bootstap'],
+        tags: ['HTML', 'CSS', 'Bootstap'],
         featured: false
     },
     // Android Projects
@@ -55,7 +55,7 @@ export const projects = [
         title: 'Aplikasi KursusApp',
         description: 'Aplikasi mobile untuk platform pembelajaran online.',
         category: 'Android',
-        thumbnail: '/projects/android/kursus/thumb.jpg',
+        thumbnail: '/projects/android/kursus/thumb.png',
         images: [
             '/projects/android/kursus/0.jpg',
             '/projects/android/kursus/1.jpg',
@@ -68,7 +68,7 @@ export const projects = [
             '/projects/android/kursus/8.png',
             '/projects/android/kursus/9.png',
         ],
-        tags: ['Laravel','Filament', 'Android Studio', 'Retrofit', 'Material Design 3', ],
+        tags: ['Laravel', 'Filament', 'Android Studio', 'Retrofit', 'Material Design 3',],
         featured: true
     },
     {
@@ -76,7 +76,7 @@ export const projects = [
         title: 'Aplikasi JadwalKu.',
         description: 'Aplikasi jadwal mata kuliah sederhana untuk kebutuhan mahasiswa',
         category: 'Android',
-        thumbnail: '/projects/android/jadwalku/thumb.jpg',
+        thumbnail: '/projects/android/jadwalku/thumb.png',
         images: [
             '/projects/android/jadwalku/1.jpg',
             '/projects/android/jadwalku/2.jpg',

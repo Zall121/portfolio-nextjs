@@ -18,6 +18,35 @@ export default function Hero() {
             {/* Background */}
             <div className="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none" />
 
+            {/* Full-Width Signature "Portfolio." Background Text */}
+            <motion.div
+                className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.2, delay: 0.3 }}
+            >
+                <motion.span
+                    className="whitespace-nowrap"
+                    style={{
+                        fontFamily: "'Allura', 'Dancing Script', 'Great Vibes', 'Parisienne', cursive",
+                        fontSize: 'clamp(8rem, 25vw, 28rem)',
+                        fontWeight: 300,
+                        fontStyle: 'italic',
+                        background: 'linear-gradient(135deg, rgba(168,85,247,0.12) 0%, rgba(59,130,246,0.12) 50%, rgba(168,85,247,0.08) 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
+                        letterSpacing: '-0.03em',
+                        textShadow: '0 0 120px rgba(168,85,247,0.08)',
+                    }}
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 1.5, delay: 0.5, ease: 'easeOut' }}
+                >
+                    Portfolio.
+                </motion.span>
+            </motion.div>
+
             {/* Main Content */}
             <div className="relative z-10 w-full max-w-7xl mx-auto">
                 <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
@@ -25,12 +54,12 @@ export default function Hero() {
                     {/* Lanyard Canvas */}
                     <motion.div
                         id="lanyard-container"
-                        className="order-1 lg:order-2 w-full flex justify-center"
+                        className="order-1 lg:order-2 w-full flex justify-center relative"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                        <div id="lanyard-wrapper" className="w-full h-full">
+                        <div id="lanyard-wrapper" className="w-full h-full relative z-10">
                             <LanyardSection className="w-full h-full" />
                         </div>
                     </motion.div>

@@ -107,13 +107,13 @@ export default function Projects() {
                                     onClick={() => openLightbox(project)}
                                 >
                                     {/* Thumbnail */}
-                                    <div className="relative h-48 overflow-hidden" style={{ background: '#262626' }}>
+                                    <div className="relative aspect-[16/10] overflow-hidden" style={{ background: '#ffffff' }}>
                                         {project.featured && (
-                                            <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-white text-xs font-semibold z-10" style={{ background: '#f5f5f5', color: '#0a0a0a' }}>
+                                            <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-white text-xs font-semibold z-10" style={{ background: '#f5f5f5', color: '#0a0a0a' }}>
                                                 ⭐ Unggulan
                                             </div>
                                         )}
-                                        <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs z-10" style={{ backgroundColor: 'rgba(10,10,15,0.8)', border: '1px solid rgba(255,255,255,0.1)', color: '#d1d5db' }}>
+                                        <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs z-10" style={{ backgroundColor: 'rgba(10,10,15,0.8)', border: '1px solid rgba(255,255,255,0.1)', color: '#d1d5db' }}>
                                             {project.category}
                                         </div>
 
@@ -121,14 +121,14 @@ export default function Projects() {
                                         <img
                                             src={project.thumbnail}
                                             alt={project.title}
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full object-contain"
                                             onError={(e) => {
                                                 e.target.style.display = 'none';
                                                 e.target.nextSibling.style.display = 'flex';
                                             }}
                                         />
                                         {/* Fallback icon if image fails */}
-                                        <div className="w-full h-full items-center justify-center absolute inset-0" style={{ display: 'none' }}>
+                                        <div className="w-full h-full items-center justify-center absolute inset-0" style={{ display: 'none', background: '#262626' }}>
                                             <span className="text-4xl opacity-50">
                                                 {project.category === 'Web' ? '🌐' : '📱'}
                                             </span>
